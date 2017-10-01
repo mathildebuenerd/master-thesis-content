@@ -1,0 +1,55 @@
+{
+  "projects": [
+    {
+      "name":"",
+      "author":"",
+      "description":"",
+      "website":"",
+      "video":"",
+      "keywords":""
+    }
+
+  ],
+
+  "theory": [
+    {
+      "texts": [
+        {
+          "id":"00",
+          "title":"",
+          "author":"",
+          "description":"",
+          "date":"",
+          "keywords":"",
+          "why":"",
+          "link":""
+        }
+      ]
+    },
+    {
+      "notions": [
+        {
+          "term":"",
+          "definition":"",
+          "relatedText":""
+        }
+
+      ]
+    },
+    {
+      "definitions": [
+        {
+          "term":"",
+          "definition":""
+        }
+      ]
+    }
+  ],
+
+  "prototypes": [
+    {
+      "name":"",
+      "date"
+    }
+  ]
+}
