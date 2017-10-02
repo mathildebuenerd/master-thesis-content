@@ -24,7 +24,7 @@
               "id": "00",
               "title": "Google et le capitalisme linguistique",
               "author": "Frederic Kaplan",
-              "description": "Le vrai et le seul modèle commercial qui fait vivre Google est la spéculation sur les mots. C’est avant tout un algorithme d’enchérissement sur les mots qui a rendu Google riche. Nous pouvons sous cette lumière reinterpréter tous les outils de complétion/correction automatique qui petit à petit tendent à accroître leur contrôle sur la langue elle-même. Ces nouvelles prothèses linguistiques ramènent la langue dans le domaine où elle est le mieux exploitable commercialement. Bienvenue dans le régime du capitalisme linguistique.",
+              "description": "Partant de l'idée que c’est avant tout un algorithme d’enchérissement sur les mots qui a rendu Google riche, F. Kaplan introduit l'idée selo laquelle nous entrons dans l'ère du capitalisme linguistique. 'Nous pouvons sous cette lumière reinterpréter tous les outils de complétion/correction automatique qui petit à petit tendent à accroître leur contrôle sur la langue elle-même. Ces nouvelles prothèses linguistiques ramènent la langue dans le domaine où elle est le mieux exploitable commercialement.'",
               "date": "septembre 2011",
               "keywords": [
                 "linguistique",
@@ -33,22 +33,26 @@
                 "algorithme",
                 "Google"
               ],
+              "quotes":[
+                "Google capte les mouvements réguliers de la langue et les exploite commercialement, comme d’autres spécule sur la valeur des matières premières.",
+                "Que craignent les acteurs du capitalisme linguistique ? Que la langue leur échappe, qu’elle se brise, se « dysorthographie », qu’elle devienne imprédictible … Quand Google corrige un mot que vous avez mal tapé, il ne fait pas que vous rendre service, il transforme un matériau sans valeur (un mot mal orthographié) en une ressource économique viable (un mot bien orthographié qui lui rapporte directement de l’argent). Quand Google prolonge une phrase que vous avez commencé à taper, il ne fait pas que vous faire gagner du temps, il vous ramène dans le domaine de la langue qu’il exploite, vous invite à ne pas sortir du chemin statistique tracés par les autres internautes.",
+                "Pas de théorie du complot. Google n’entend pas modifier la langue à dessein. La régularisation que nous évoquons ici est simplement un effet direct de la logique de son modèle commercial. Toutes"
+              ],
               "why": "",
-              "link": ""
+              "link": "https://fkaplan.wordpress.com/2011/09/07/google-et-le-capitalisme-linguistique/"
             },
             {
               "id": "01",
               "title": "Hertzian Tales",
               "author": "Anthony Dunne",
-              "description": "Le vrai et le seul modèle commercial qui fait vivre Google est la spéculation sur les mots. C’est avant tout un algorithme d’enchérissement sur les mots qui a rendu Google riche. Nous pouvons sous cette lumière reinterpréter tous les outils de complétion/correction automatique qui petit à petit tendent à accroître leur contrôle sur la langue elle-même. Ces nouvelles prothèses linguistiques ramènent la langue dans le domaine où elle est le mieux exploitable commercialement. Bienvenue dans le régime du capitalisme linguistique.",
-              "date": "septembre 2011",
+              "description": "",
+              "date": "1999",
               "keywords": [
-                "linguistique",
-                "capitalisme",
-                "spéculation",
-                "algorithme",
-                "Google"
+                "design critique",
+                "speculative",
+                "objet électronique"
               ],
+              "quotes":[],
               "why": "",
               "link": ""
             }
@@ -58,15 +62,25 @@
           "notions": [
             {
               "term": "capitalisme linguistique",
-              "definition": "",
+              "definition": "Idée selon laquelle la langue devient un espace commercialement exploitable pour faire du profit.",
               "relatedText": "00"
+            },
+            {
+              "term": "systèmes d'autocomplétion / suggestion / recommandation",
+              "definition": "On peut effectuer une gradation entre ces trois termes, du plus discret au plus invasif, du basé sur l'écriture au basé sur le sens"
+            },
+            {
+              "term": "",
+              "definition": "",
+              "relatedText": ""
             }
           ]
         },
         {
           "definitions": [
             {
-              "term": "",
+              "term":"système de suggestion",
+              "term-trad":"suggestion system",
               "definition": ""
             }
           ]
@@ -74,16 +88,8 @@
       ],
       "prototypes": [
         {
-          "name": "prototype1",
-          "date":"2011"
-        },
-        {
-          "name": "prototype2",
-          "date":"2012"
-        },
-        {
-          "name": "prototype2",
-          "date":"2013"
+          "name":"",
+          "date":""
         }
       ]
 }

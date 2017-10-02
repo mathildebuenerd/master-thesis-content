@@ -19,10 +19,26 @@ section {
     padding: 20px;
 }
 
+article p {
+    display: none;
+}
+
+/*article:hover h3 ~ p {*/
+    /*display: block;*/
+/*}*/
+
+.id {
+    display: none;
+}
+
 /* Typography */
 
 p{
     max-width: 500px;
+}
+
+h3 {
+    cursor: pointer;
 }
 
 

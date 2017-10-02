@@ -28,7 +28,7 @@ function sortArticles() {
 
     for (let i=0; i<articles.length; i++) {
         console.log('article n°' + i);
-        let paragraphes = articles[i].querySelectorAll('p');
+        let paragraphes = articles[i].querySelectorAll('p, h3, h4');
 
         for (let j=0; j<paragraphes.length; j++) {
             if (paragraphes[j].textContent.toUpperCase().indexOf(filter) > -1) { // si on a trouvé quelque chose
