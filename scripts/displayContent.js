@@ -10,87 +10,75 @@ let subtest = Object.keys(test);
 
 //readJSON(content);
 
-function readJSON(data) {
+// function readJSON(data) {
+//
+//     Object.keys(data).forEach((k) => {
+//         if (typeof data[k] === "object") { // s'il y a des sous-objets on va aussi chercher leur contenu
+//             if (data[k].length > 1) {
+//                 for (let i=0; i<data[k].length; i++) {
+//                     //console.log(data[k][i]);
+//                     readJSON(data[k][i]);
+//                 }
+//             }
+//         }
+//
+//     });
+//
+// }
+//
+readJSON();
 
-    Object.keys(data).forEach((k) => {
-        if (typeof data[k] === "object") { // s'il y a des sous-objets on va aussi chercher leur contenu
-            if (data[k].length > 1) {
-                for (let i=0; i<data[k].length; i++) {
-                    //console.log(data[k][i]);
-                    readJSON(data[k][i]);
-                }
-            }
-        }
-
-    });
-
+function display(keyContent, keyName) {
+    let paragraphe = document.createElement('p');
+    paragraphe.textContent = keyContent;
+    paragraphe.setAttribute('class', keyName);
+    //                         subSubBloc.appendChild(paragraphe);
+    return(paragraphe);
 }
 
-display();
 
-function display() {
+function readJSON() {
 
-    console.log("display");
-    let mykeys = Object.keys(content);
-    // console.log(content[keys[1]]);
-    // console.log(content[keys[1]][1]);
+    let keys = Object.keys(content); // afficher les intitulés des keys
 
-    for (let i=0; i<mykeys.length; i++) {
-        let bloc = document.createElement('div');
-        bloc.setAttribute('class', mykeys[i]);
+    for (let i=0; i<keys.length; i++) { // on compte le nombre de keys (projects, theory, prototype)
+        let section = document.createElement('section'); // correspond aux grandes sections "projets" "prototypes" "theory"...
+        section.setAttribute('class', keys[i]);
+        for (let j=0; j<content[keys[i]].length; j++) { // on loop dans ces keys
 
-        if (content[mykeys[i]].length > 1) { // si l'objet a des sous-objets
-
-            //console.log(content[mykeys[i]][0]);
-            // console.log(content[mykeys[i]].length);
-            // for (let j=0; j<content[mykeys[i]].length; j++) {
-            //     let subBloc = document.createElement('div');
-            //     let subkey = Object.keys(content[mykeys[i]]);
-            //     console.log(subkey[j]);
-            //     subBloc.setAttribute('class', subkey);
-            //     bloc.appendChild(subBloc);
-            // }
-
-
-        } else {
-            console.log("je n'ai pas de sous-objets " + content[mykeys[i]]);
-            let subKeys = Object.keys(content[mykeys[i]][0]);
-            console.log(subKeys);
-            //console.log(Object.keys(content[mykeys[i]][0]));
-            for (let k=0; k<content[mykeys[i]].length; k++) {
-                let subBloc = document.createElement('div');
-                for (let l=0; l<Object.keys(content[mykeys[i]][k]).length; l++) {
-                    let paragraphe = document.createElement('p');
-                    //console.log(content[mykeys[i]][k][l]);
-                    paragraphe.textContent = content[mykeys[i]][k][subKeys[l]];
-                    subBloc.appendChild(paragraphe);
+            if(Object.keys(content[keys[i]][j]).length > 1) { // si on a plus de 1 key, ça veut dire qu'on est déjà au dernier niveau
+                let article = document.createElement('article');
+                let finalKeys = Object.keys(content[keys[i]][j]); // contient la liste des clés de dernier niveau
+                for(let k=0; k<finalKeys.length; k++) {
+                    let keyContent = content[keys[i]][j][finalKeys[k]];
+                    let keyName = finalKeys[k]; // correspond à l'intitulé de la key
+                    let newtag = display(keyContent, keyName);
+                    article.appendChild(newtag);
                 }
-                bloc.appendChild(subBloc);
+                section.appendChild(article);
+
+            } else { // si on a une seule key ça veut dire qu'on a affaire à un sous-niveau
+                let subKeys = Object.keys(content[keys[i]][j]);
+                let subKeysContent = content[keys[i]][j];
+                let subSection = document.createElement('section'); // correspond aux sous-sections de la catégorie "theory" : "texts", "notions"...
+                subSection.setAttribute('class', subKeys[0]);
+
+                for (let l=0; l<subKeysContent[subKeys].length; l++) { // on parcoure chaque sous-sections
+                    let article = document.createElement('article');
+                    let finalKeys = Object.keys(subKeysContent[subKeys][l]);
+
+                    for (let k=0; k<finalKeys.length; k++) { // correspond au niveau final
+                        let keyContent = subKeysContent[subKeys][l][finalKeys[k]];
+                        console.log(keyContent);
+                        let keyName = finalKeys[k]; // correspond à l'intitulé de la key
+                        let newtag = display(keyContent, keyName);
+                        article.appendChild(newtag);
+                    }
+                    subSection.appendChild(article);
+                }
+                section.appendChild(subSection);
             }
-
         }
-        //console.log(content[mykeys[0]].length);
-
-        // for (let j=0; j<mykeys[i].length; j++) {
-        //         let subKeys = Object.keys(content[mykeys[i]][j]);
-        //         console.log("subkeys " + subKeys);
-        //         let subBloc = document.createElement('div');
-        //         // subBloc.setAttribute('class', subKeys[0]);
-        //
-        //         for(let k=0; k<mykeys[i][j].length; k++) {
-        //             let paragraphe = document.createElement('p');
-        //             paragraphe.innerHTML = mykeys[i][j];
-        //             paragraphe.setAttribute("class",mykeys[i][j]);
-        //             subBloc.appendChild(paragraphe);
-        //         }
-        //
-        //         bloc.appendChild(subBloc);
-        //         console.log("appendchild");
-        //
-        // }
-
-        document.body.appendChild(bloc);
+        document.body.appendChild(section);
     }
-
-    
 }
