@@ -2,37 +2,12 @@
  * Created by mathi on 01/10/2017.
  */
 
-//console.log("hello");
-
-let test = Object.keys(content);
-let subtest = Object.keys(test);
-
-
-//readJSON(content);
-
-// function readJSON(data) {
-//
-//     Object.keys(data).forEach((k) => {
-//         if (typeof data[k] === "object") { // s'il y a des sous-objets on va aussi chercher leur contenu
-//             if (data[k].length > 1) {
-//                 for (let i=0; i<data[k].length; i++) {
-//                     //console.log(data[k][i]);
-//                     readJSON(data[k][i]);
-//                 }
-//             }
-//         }
-//
-//     });
-//
-// }
-//
 readJSON();
 
 function display(keyContent, keyName) {
     let paragraphe = document.createElement('p');
     paragraphe.textContent = keyContent;
     paragraphe.setAttribute('class', keyName);
-    //                         subSubBloc.appendChild(paragraphe);
     return(paragraphe);
 }
 
@@ -69,7 +44,7 @@ function readJSON() {
 
                     for (let k=0; k<finalKeys.length; k++) { // correspond au niveau final
                         let keyContent = subKeysContent[subKeys][l][finalKeys[k]];
-                        console.log(keyContent);
+                        // console.log(keyContent);
                         let keyName = finalKeys[k]; // correspond à l'intitulé de la key
                         let newtag = display(keyContent, keyName);
                         article.appendChild(newtag);

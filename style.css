@@ -1,0 +1,44 @@
+html {
+    font-family: "Work Sans", "Helvetica", "arial", sans-serif;
+    background-color: #222;
+    color: #ddd;
+}
+
+body {
+    display: flex;
+    margin: 0;
+}
+
+body > section:nth-child(2n) { /* on élargit la colonne du milieu (theory) car elle a des sous-catégories */
+    display: flex;
+    flex:2;
+}
+
+
+section {
+    padding: 20px;
+}
+
+/* Typography */
+
+p{
+    max-width: 500px;
+}
+
+
+/* While searching */
+
+#searchbar {
+    position: absolute;
+    top: 20px;
+    right:20px;
+    padding: 10px;
+    background-color: #222222;
+    color: #dddddd;
+    border: 1px solid #dddddd;
+}
+
+.hidden {
+    opacity: 0.4;
+}
+
